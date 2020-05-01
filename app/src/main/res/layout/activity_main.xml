@@ -12,7 +12,8 @@
         android:id="@+id/tv_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
+
     <com.baidu.mapapi.map.MapView
         android:id="@+id/mapview"
         android:layout_width="match_parent"
@@ -20,4 +21,4 @@
         android:clickable="true">
     </com.baidu.mapapi.map.MapView>
 
-</>
+</LinearLayout>

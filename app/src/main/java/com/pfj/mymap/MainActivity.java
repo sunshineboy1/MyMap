@@ -154,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
             if (location.getLocType() == BDLocation.TypeGpsLocation
                     || location.getLocType() == BDLocation.TypeNetWorkLocation) {
                 locateToCurPos(location);
-
             }
 
         }
@@ -162,7 +161,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void locateToCurPos(BDLocation location) {
         if (isFirstLocate){
-            LatLng ll = new LatLng(location.getAltitude(),location.getLongitude());
+            Toast.makeText(this, "当前位置：" + location.getAddrStr(), Toast.LENGTH_SHORT).show();
+            LatLng ll = new LatLng(location.getLatitude(),location.getLongitude());
             MapStatusUpdate msu = MapStatusUpdateFactory.newLatLng(ll);
             baiduMap.animateMapStatus(msu);
             msu = MapStatusUpdateFactory.zoomTo(16f);
