@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void locateToCurPos(BDLocation location) {
         if (isFirstLocate){
-            LatLng ll = new LatLng(location.getAltitude(),location.getLongitude());
+            LatLng ll = new LatLng(location.getLatitude(),location.getLongitude());
             MapStatusUpdate msu = MapStatusUpdateFactory.newLatLng(ll);
             baiduMap.animateMapStatus(msu);
             msu = MapStatusUpdateFactory.zoomTo(16f);
